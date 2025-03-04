@@ -1,0 +1,59 @@
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.progress-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.progress-dot {
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  background: #ccc;
+}
+
+.progress-dot.active {
+  background: #fbca1f;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.progress-dot.done {
+  background: #fbca1f;
+}
+
+.quiz-container {
+  max-width: 350px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+.question {
+  display: none;
+}
+.question.active {
+  display: block;
+}
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
