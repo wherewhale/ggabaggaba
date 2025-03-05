@@ -1,0 +1,22 @@
+#title{
+    text-align: center;
+}
+#ur_score_is{
+    text-align: center;
+    font-size: 16px;
+}
+
+#user_score{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#feedback{
+    text-align: center;
+}
+
+#avg_score{
+    text-align: center;
+}
+
