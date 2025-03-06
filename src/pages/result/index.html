@@ -7,26 +7,45 @@
     <link rel="stylesheet" href="../../styles/globals.css" />
     <link rel="stylesheet" href="./result.module.css" />
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <h1 class="bold-big">퀴즈 결과</h1>
-    <p class="bold-small">당신의 점수는...</p>
-    <p class="bold-big"><span id="score"></span> 점</p>
+    <main class="layout">
+      <div class="top-bar">
+        <div class="circle-container">
+          <div class="circle red"></div>
+          <div class="circle yellow"></div>
+          <div class="circle green"></div>
+        </div>
+      </div>
+      <h1>🎊 퀴즈 결과 🎊</h1>
+      <p class="bold-normal">당신의 점수는...</p>
+      <p class="bold-big font-kyobo text-red"><span id="score"></span> 점</p>
+      <div class="image-container">
+        <img src="../../../assets/images/hand_underline.png" alt="퀴즈 결과 이미지" class="result-image" />
+      </div>
+      
 
-    <!-- 점수에 따른 피드백 문구 -->
+      <!-- 점수에 따른 피드백 문구 -->
 
-    <p class="feedback"></p>
+      <p class="feedback"></p>
 
-    <hr />
-    <!-- 평균 스코어 넣는 부분! -->
-    <p class="bold-normal">
-      우리 반 평균 점수는..? <br />
-      <span id="average_score"></span> 점
-    </p>
+      <hr />
+      <!-- 평균 스코어 넣는 부분! -->
+      <p class="bold-normal">
+        우리 반 평균 점수는..? <br />
+        <p class="bold-big font-kyobo text-red">
+          <span id="average_score"></span> 점
+        </p>
+        <div class="image-container">
+          <img src="../../../assets/images/hand_underline.png" alt="퀴즈 결과 이미지" class="result-image" />
+        </div>
+        
+      </p>
 
-    <!-- 문제 다시 풀어보기(시작 화면으로)(문제시 삭제) -->
-    <button id="retry-btn" class="retry-button">문제 다시 풀어보기</button>
-
-    <script type="module" src="./index.js"></script>
+      <!-- 문제 다시 풀어보기(시작 화면으로)(문제시 삭제) -->
+      <button id="retry-btn" class="retry-button">문제 다시 풀어보기<img class="icon" src="../../../assets//images/restore.png" alt="restore">
+      </button>
+    </main>
   </body>
 </html>
