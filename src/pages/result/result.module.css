@@ -24,5 +24,18 @@
     text-align: center;
 }
 
+.retry-button{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    display: flex;
+}
+
+
+.retry-button:hover {
+    background-color: #fcc22e;
+  }
+
 
 

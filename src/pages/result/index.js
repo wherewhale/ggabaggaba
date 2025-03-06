@@ -22,3 +22,9 @@ const feedbackElement = document.getElementsByClassName("feedback")[0];
 if (feedbackElement) {
   feedbackElement.textContent = feedback;
 }
+
+
+// 퀴즈 시작 페이지로 이동하는 부분 (문제시 삭제)
+document.getElementById("retry-btn").addEventListener("click", function () {
+  window.location.href = "../index.html"; // pages 폴더로 이동
+});
