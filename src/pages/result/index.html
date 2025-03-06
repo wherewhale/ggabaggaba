@@ -6,33 +6,38 @@
     <title>퀴즈 결과</title>
     <link rel="stylesheet" href="../../styles/globals.css" />
     <link rel="stylesheet" href="./result.module.css" />
-    <script type="module" src="./index.js"></script>
   </head>
   <body>
-
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <h1 class = "bold-big">퀴즈 결과</h1>
-    <p class = "bold-small">당신의 점수는...</p>
-    <p class = "bold-big"><span id="score"></span> 점</p>
-
+    <h1 class="bold-big">퀴즈 결과</h1>
+    <p class="bold-small">당신의 점수는...</p>
+    <p class="bold-big"><span id="score"></span> 점</p>
+    <h1 class="bold-big">퀴즈 결과</h1>
 
     <!-- 점수에 따른 피드백 문구 -->
 
-    <p class = "feedback"></p>
-
+    <p class="feedback"></p>
 
     <div id="result">
-      <p class = "bold-small">결과를 불러오는 중...</p>
+      <p class="bold-small">결과를 불러오는 중...</p>
     </div>
 
-    
-
     <!-- 평균 스코어 넣는 부분! -->
-    <p class = "bold-normal">평균 점수: <span id="avg_score"></span> 점</p>
+    <p class="bold-normal">평균 점수: <span id="avg_score"></span> 점</p>
 
     <!-- 문제 다시 풀어보기(시작 화면으로)(문제시 삭제) -->
     <button id="retry-btn" class="retry-button">문제 다시 풀어보기</button>
 
+    <p class="bold-small">당신의 점수는...</p>
+    <p class="bold-big"><span id="score"></span> 점</p>
+    <p class="feedback" id="feedback"></p>
+
+    <hr />
+    <!-- 평균 스코어 넣는 부분! -->
+    <p class="bold-normal">
+      우리 반 평균 점수는..? <br />
+      <span id="average_score"></span> 점
+    </p>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
-
