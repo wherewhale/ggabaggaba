@@ -1,6 +1,6 @@
 import supabase from './db.config.js';
 
-export async function insertOrUpdateUserAnswer(answer) {
+export async function insertAnswer(answer) {
     try {
         const dataToInsert = {
             q1: answer[0],
