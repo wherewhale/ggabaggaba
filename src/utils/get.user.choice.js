@@ -3,7 +3,7 @@ import supabase from './db.config.js';
 export async function getUserResult() {
   const { data, error } = await supabase
     .from('TEST')
-    .select('q1, q2, q3, q4, q5, q6, q7, q8, q9, q10');
+    .select('q1, q2, q3, q4, q5, q6, q7, q8');
 
   if (error) {
     console.error('Error fetching data:', error);
@@ -12,11 +12,9 @@ export async function getUserResult() {
 
   const frequencyMap = {};
 
-  ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8', 'q9', 'q10'].forEach(
-    (col) => {
-      frequencyMap[col] = { 1: 0, 2: 0, 3: 0, 4: 0 };
-    }
-  );
+  ['q1', 'q2', 'q3', 'q4', 'q5', 'q6', 'q7', 'q8'].forEach((col) => {
+    frequencyMap[col] = { 1: 0, 2: 0, 3: 0, 4: 0 };
+  });
 
   data.forEach((row) => {
     Object.keys(row).forEach((col) => {

@@ -1,3 +1,43 @@
+import { getUserResult } from '../../utils/get.user.choice.js';
+import { QUESTION } from '../../common/constants/question.js';
+import { ANSWER } from '../../common/constants/answer.js';
+import { getNameByNumber } from '../../utils/common.js';
+
+const resultData = await getUserResult();
+const statisticsTitle = document.getElementById('statistics-title');
+const statisticsDescription = document.getElementById('statistics-description');
+statisticsTitle.textContent = QUESTION[0];
+statisticsDescription.textContent = getNameByNumber(ANSWER[0]);
+let currentAnswer = 0;
+
+function nextAnswer() {
+  currentAnswer += 1;
+  if (currentAnswer > 9) {
+    currentAnswer = 9;
+  } else {
+    statisticsTitle.textContent = QUESTION[currentAnswer];
+    statisticsDescription.textContent = getNameByNumber(ANSWER[currentAnswer]);
+    myChart.data.datasets[0].data = Object.values(
+      resultData[`q${currentAnswer + 1}`]
+    );
+    myChart.update();
+  }
+}
+
+function prevAnswer() {
+  currentAnswer -= 1;
+  if (currentAnswer < 0) {
+    currentAnswer = 0;
+  } else {
+    statisticsTitle.textContent = QUESTION[currentAnswer];
+    statisticsDescription.textContent = getNameByNumber(ANSWER[currentAnswer]);
+    myChart.data.datasets[0].data = Object.values(
+      resultData[`q${currentAnswer + 1}`]
+    );
+    myChart.update();
+  }
+}
+
 var ctx = document.getElementById('myChart').getContext('2d');
 var myChart = new Chart(ctx, {
   type: 'pie', // Changed from 'bar' to 'pie'
@@ -6,7 +46,7 @@ var myChart = new Chart(ctx, {
     datasets: [
       {
         label: '선택 비율',
-        data: [12, 19, 3, 5],
+        data: Object.values(resultData[`q${currentAnswer + 1}`]),
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(54, 162, 235, 0.2)',
@@ -39,3 +79,6 @@ var myChart = new Chart(ctx, {
     },
   },
 });
+
+window.nextAnswer = nextAnswer;
+window.prevAnswer = prevAnswer;
