@@ -1,27 +1,42 @@
-document.addEventListener('mousemove', (event) => {
-  const eyes = document.querySelectorAll('.eye');
+import { getScoreAverage } from '../utils/get.user.choice.js';
 
-  eyes.forEach((eye) => {
-    const pupil = eye.querySelector('.pupil');
-    const eyeRect = eye.getBoundingClientRect();
+document.addEventListener('DOMContentLoaded', async function () {
+  function easeInOut(t) {
+    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+  }
 
-    // 눈 중심 좌표 구하기
-    const eyeCenterX = eyeRect.left + eyeRect.width / 2;
-    const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+  function animateValue(id, start, end, duration) {
+    const obj = document.getElementById(id);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const easedProgress = easeInOut(progress);
+      obj.innerText = `현재까지 참여한 인원 : ${Math.floor(easedProgress * (end - start) + start)}명`;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
 
-    // 마우스 위치에서 눈 중심까지의 거리 계산
-    const deltaX = event.clientX - eyeCenterX;
-    const deltaY = event.clientY - eyeCenterY;
+  function animateScore(id, start, end, duration) {
+    const obj = document.getElementById(id);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      const easedProgress = easeInOut(progress);
+      obj.innerText = `평균 점수 : ${Math.floor(easedProgress * (end - start) + start)}점`;
+      if (progress < 1) {
+        window.requestAnimationFrame(step);
+      }
+    };
+    window.requestAnimationFrame(step);
+  }
 
-    // 각도 계산 (radian -> degree)
-    const angle = Math.atan2(deltaY, deltaX);
-
-    // 눈동자의 최대 이동 반경 (눈 크기의 1/3 정도)
-    const maxDistance = eyeRect.width / 3;
-    const pupilX = Math.cos(angle) * maxDistance;
-    const pupilY = Math.sin(angle) * maxDistance;
-
-    // 눈동자 이동 적용
-    pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
-  });
+  // Fetch the average score and then start the animations
+  const averageScore = await getScoreAverage();
+  animateValue('participant-count', 0, averageScore.total, 2000);
+  animateScore('average-score', 0, averageScore.score, 2000);
 });

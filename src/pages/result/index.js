@@ -28,5 +28,5 @@ if (feedbackElement) {
 document.getElementById('retry-btn').addEventListener('click', function () {
   window.location.href = '../index.html'; // pages 폴더로 이동
 });
-document.getElementById('feedback').textContent = feedback;
+
 averageScore.textContent = (await getScoreAverage()).toFixed(2);

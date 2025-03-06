@@ -35,27 +35,6 @@
   gap: 20px;
 }
 
-.eye {
-  width: 80px;
-  height: 80px;
-  background-color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 3px solid black;
-  position: relative;
-}
-
-.pupil {
-  width: 30px;
-  height: 30px;
-  background-color: black;
-  border-radius: 50%;
-  position: absolute;
-  transition: transform 0.1s linear;
-}
-
 .button-container {
   display: flex;
   margin-top: 4rem;
