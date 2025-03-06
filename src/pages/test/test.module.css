@@ -41,9 +41,7 @@
   max-width: 350px;
   margin: auto;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .question {
@@ -63,4 +61,5 @@
 .question-text {
   font-size: 1.5rem;
   font-weight: 500;
+  margin: 0 0 1rem 0;
 }

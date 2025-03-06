@@ -7,25 +7,39 @@
     <link rel="stylesheet" href="../../styles/globals.css" />
     <link rel="stylesheet" href="./test.module.css" />
     <script type="module" src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   </head>
 
   <body>
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <div class="progress-container">
-      <div class="progress-dot active" id="d1"></div>
-      <div class="progress-dot" id="d2"></div>
-      <div class="progress-dot" id="d3"></div>
-      <div class="progress-dot" id="d4"></div>
-      <div class="progress-dot" id="d5"></div>
-      <div class="progress-dot" id="d6"></div>
-      <div class="progress-dot" id="d7"></div>
-      <div class="progress-dot" id="d8"></div>
-      <div class="progress-dot" id="d9"></div>
-      <div class="progress-dot" id="d10"></div>
-    </div>
-    <div class="quiz-container">
-      <p id="question-text" class="question-text">문제 1: 1번 문제</p>
-      <div id="questions-container" class="question-container"></div>
-    </div>
+    <header>
+      <div class="progress-container">
+        <div class="progress-dot active" id="d1"></div>
+        <div class="progress-dot" id="d2"></div>
+        <div class="progress-dot" id="d3"></div>
+        <div class="progress-dot" id="d4"></div>
+        <div class="progress-dot" id="d5"></div>
+        <div class="progress-dot" id="d6"></div>
+        <div class="progress-dot" id="d7"></div>
+        <div class="progress-dot" id="d8"></div>
+        <div class="progress-dot" id="d9"></div>
+        <div class="progress-dot" id="d10"></div>
+      </div>
+    </header>
+    <main class="layout">
+      <div class="top-bar">
+        <div class="circle-container">
+          <div class="circle red"></div>
+          <div class="circle yellow"></div>
+          <div class="circle green"></div>
+        </div>
+      </div>
+      <div class="quiz-container">
+        <p id="question-text" class="question-text">문제 1: 1번 문제</p>
+        <div id="questions-container" class="question-container"></div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>© 2025. GGABA All rights reserved.</p>
+    </footer>
   </body>
 </html>
