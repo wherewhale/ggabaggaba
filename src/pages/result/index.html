@@ -9,17 +9,21 @@
     <script type="module" src="./index.js"></script>
   </head>
   <body>
+
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <h1 class = "bold-big">퀴즈 결과</h1>
+    <h1>퀴즈 결과</h1>
+    <p class = "bold-big">당신의 점수는...
+    <span id="score"></span> 점</p>
+    <div id="result">
+      <p>결과를 불러오는 중...</p>
+    </div>
 
     <!-- 당신의 점수 -->
 
-    <p class="bold-small">당신의 점수는...</p> 
-    <p class = "bold-big"><span id="score"></span> 점</p>
     <p class = "feedback"></p>
     <!-- 평균 스코어 넣는 부분! -->
-    <p class = "bold-normal">평균 점수: <span id="score"></span> 점</p>
+    <p class = "bold-normal">평균 점수: <span id="avg_score"></span> 점</p>
 
-    
   </body>
 </html>
+
