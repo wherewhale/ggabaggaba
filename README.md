@@ -47,3 +47,5 @@ IT's Your Life 6기 - 1주차 친해지길 바라 프로젝트에서 만든 토�
 ## 기여자
 
 [Wha1eSon(손영호)](https://github.com/wherewhale)
+[ehddbs4521(김동윤)](https://github.com/ehddbs4521)
+[Jungwoo(염정우)](https://github.com/yeomjungwoo)
