@@ -11,6 +11,13 @@
   </head>
   <body>
     <main class="layout">
+      <div class="top-bar">
+        <div class="circle-container">
+          <div class="circle red"></div>
+          <div class="circle yellow"></div>
+          <div class="circle green"></div>
+        </div>
+      </div>
       <!-- 로고 -->
       <div class="logo-container">
         <img class="logo-img" src="../../assets/images/logo.png" alt="logo" width="50px" />
@@ -23,12 +30,15 @@
       <!-- 통계 및 버튼 -->
       <div class="button-container">
         <!-- number should be count up animation -->
-        <p id="participant-count">현재까지 참여한 인원 : 명</p>
-        <p id="average-score">평균 점수 : 점</p>
+        <p id="participant-count" class="description">현재까지 참여한 인원 : 명</p>
+        <p id="average-score" class="description">평균 점수 : 점</p>
         <a href="./test/index.html">
           <button>시작하기!</button>
         </a>
       </div>
     </main>
+    <footer class="footer">
+      <p>© 2025. GGABA All rights reserved.</p>
+    </footer>
   </body>
 </html>

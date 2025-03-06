@@ -2,30 +2,24 @@
   font-family: 'Pretendard';
   font-weight: 700;
   font-display: swap;
-  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Bold.subset.woff2)
-      format('woff2'),
-    url(./fonts/Pretendard/woff-subset/Pretendard-Bold.subset.woff)
-      format('woff');
+  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Bold.subset.woff2) format('woff2'),
+    url(./fonts/Pretendard/woff-subset/Pretendard-Bold.subset.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 500;
   font-display: swap;
-  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Medium.subset.woff2)
-      format('woff2'),
-    url(./fonts/Pretendard/woff-subset/Pretendard-Medium.subset.woff)
-      format('woff');
+  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Medium.subset.woff2) format('woff2'),
+    url(./fonts/Pretendard/woff-subset/Pretendard-Medium.subset.woff) format('woff');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 400;
   font-display: swap;
-  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Regular.subset.woff2)
-      format('woff2'),
-    url(./fonts/Pretendard/woff-subset/Pretendard-Regular.subset.woff)
-      format('woff');
+  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Regular.subset.woff2) format('woff2'),
+    url(./fonts/Pretendard/woff-subset/Pretendard-Regular.subset.woff) format('woff');
 }
 
 html,
@@ -34,10 +28,10 @@ body {
   margin: 0;
   height: 100%;
   /* font-variation-settings: 'wght' 200 , 'wdth' 500, 'GRAD' 88; */
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
-    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
-    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif;
+  background-color: rgb(254, 246, 213);
 }
 
 ::-webkit-scrollbar-track {
@@ -66,7 +60,6 @@ body {
     padding: 4rem 0;
     max-width: 360px;
     margin: auto;
-    background-color: #f0f0f0;
   }
 }
 
@@ -74,7 +67,6 @@ body {
   body {
     padding: 4rem 0;
     margin: auto;
-    background-color: #f0f0f0;
   }
 }
 
@@ -121,4 +113,59 @@ button:hover {
 button:active {
   transform: translate(0.05em, 0.05em);
   box-shadow: 0.05em 0.05em;
+}
+
+.layout {
+  background-color: white;
+  max-width: 765px;
+  margin: auto;
+  width: 100%;
+  border: 1px solid #cbc3a4;
+  border-radius: 1rem;
+  padding-bottom: 2rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.circle-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.top-bar {
+  background-color: #cbc3a4;
+  border-bottom: #cbc3a4 1px solid;
+  padding: 1rem;
+  border-radius: 1rem 1rem 0 0;
+  margin-bottom: 2rem;
+}
+
+.circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.red {
+  background-color: rgba(252, 70, 70, 1);
+}
+
+.yellow {
+  background-color: rgba(255, 225, 0, 1);
+}
+
+.green {
+  background-color: rgba(40, 193, 49, 1);
+}
+
+.footer {
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%);
+  width: 253px;
 }
