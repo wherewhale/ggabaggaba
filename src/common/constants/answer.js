@@ -1,1 +1,2 @@
-export const ANSWER = [1, 2, 3, 4, 1, 2, 3, 4];
+export const ANSWER = [1, 3, 2, 1, 4, 1, 2, 3, 4, 3];
+// 1: 동윤 2: 정우 3: 영호 4: 유라

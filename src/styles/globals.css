@@ -2,24 +2,30 @@
   font-family: 'Pretendard';
   font-weight: 700;
   font-display: swap;
-  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Bold.subset.woff2) format('woff2'),
-    url(./fonts/Pretendard/woff-subset/Pretendard-Bold.subset.woff) format('woff');
+  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Bold.subset.woff2)
+      format('woff2'),
+    url(./fonts/Pretendard/woff-subset/Pretendard-Bold.subset.woff)
+      format('woff');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 500;
   font-display: swap;
-  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Medium.subset.woff2) format('woff2'),
-    url(./fonts/Pretendard/woff-subset/Pretendard-Medium.subset.woff) format('woff');
+  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Medium.subset.woff2)
+      format('woff2'),
+    url(./fonts/Pretendard/woff-subset/Pretendard-Medium.subset.woff)
+      format('woff');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-weight: 400;
   font-display: swap;
-  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Regular.subset.woff2) format('woff2'),
-    url(./fonts/Pretendard/woff-subset/Pretendard-Regular.subset.woff) format('woff');
+  src: url(./fonts/Pretendard/woff2-subset/Pretendard-Regular.subset.woff2)
+      format('woff2'),
+    url(./fonts/Pretendard/woff-subset/Pretendard-Regular.subset.woff)
+      format('woff');
 }
 
 html,
@@ -28,8 +34,9 @@ body {
   margin: 0;
   height: 100%;
   /* font-variation-settings: 'wght' 200 , 'wdth' 500, 'GRAD' 88; */
-  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
-    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR',
+    'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     sans-serif;
 }
 
@@ -91,4 +98,27 @@ img {
 
 li {
   list-style: none;
+}
+
+button {
+  width: fit-content;
+  background: #fbca1f;
+  font-family: inherit;
+  padding: 0.6em 1.3em;
+  font-weight: 900;
+  font-size: 18px;
+  border: 3px solid black;
+  border-radius: 0.4em;
+  box-shadow: 0.1em 0.1em;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translate(-0.05em, -0.05em);
+  box-shadow: 0.15em 0.15em;
+}
+
+button:active {
+  transform: translate(0.05em, 0.05em);
+  box-shadow: 0.05em 0.05em;
 }

@@ -1,0 +1,24 @@
+body {
+  margin: auto;
+  width: fit-content;
+}
+
+.title {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+
+.description {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.question-button {
+  width: 100%;
+  margin: 1rem 0;
+}
