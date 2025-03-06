@@ -1,41 +1,65 @@
-.title{
-    text-align: center;
+.title {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
 }
 
 .bold-small {
-    font-size: 16px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .bold-normal {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 }
 
 .bold-big {
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
 }
 
-.feedback{
-    text-align: center;
+.text-red {
+  color: #fc4646;
 }
 
-.retry-button{
-    width: fit-content;
-    margin-left: auto;
-    margin-right: auto;
-    cursor: pointer;
-    display: flex;
+.feedback {
+  text-align: center;
 }
 
+.retry-button {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  display: flex;
+  margin-top: 3rem;
+}
 
 .retry-button:hover {
-    background-color: #fcc22e;
-  }
+  background-color: #fcc22e;
+}
 
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: -1.5rem;
+}
 
+img {
+  width: 150px;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
 
+.icon {
+  width: 2rem;
+  height: 2rem;
+}

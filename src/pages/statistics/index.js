@@ -10,30 +10,42 @@ statisticsTitle.textContent = QUESTION[0];
 statisticsDescription.textContent = getNameByNumber(ANSWER[0]);
 let currentAnswer = 0;
 
+function showHideAnswer() {
+  if (statisticsDescription.classList.contains('hidden')) {
+    statisticsDescription.classList.remove('hidden');
+    console.log('hidden');
+  } else {
+    statisticsDescription.classList.add('hidden');
+    console.log('not hidden');
+  }
+}
+
 function nextAnswer() {
+  if (!statisticsDescription.classList.contains('hidden')) {
+    statisticsDescription.classList.add('hidden');
+  }
   currentAnswer += 1;
   if (currentAnswer > 9) {
     currentAnswer = 9;
   } else {
     statisticsTitle.textContent = QUESTION[currentAnswer];
     statisticsDescription.textContent = getNameByNumber(ANSWER[currentAnswer]);
-    myChart.data.datasets[0].data = Object.values(
-      resultData[`q${currentAnswer + 1}`]
-    );
+    myChart.data.datasets[0].data = Object.values(resultData[`q${currentAnswer + 1}`]);
     myChart.update();
   }
 }
 
 function prevAnswer() {
+  if (!statisticsDescription.classList.contains('hidden')) {
+    statisticsDescription.classList.add('hidden');
+  }
   currentAnswer -= 1;
   if (currentAnswer < 0) {
     currentAnswer = 0;
   } else {
     statisticsTitle.textContent = QUESTION[currentAnswer];
     statisticsDescription.textContent = getNameByNumber(ANSWER[currentAnswer]);
-    myChart.data.datasets[0].data = Object.values(
-      resultData[`q${currentAnswer + 1}`]
-    );
+    myChart.data.datasets[0].data = Object.values(resultData[`q${currentAnswer + 1}`]);
     myChart.update();
   }
 }
@@ -82,3 +94,4 @@ var myChart = new Chart(ctx, {
 
 window.nextAnswer = nextAnswer;
 window.prevAnswer = prevAnswer;
+window.showHideAnswer = showHideAnswer;

@@ -29,4 +29,4 @@ document.getElementById('retry-btn').addEventListener('click', function () {
   window.location.href = '../index.html'; // pages 폴더로 이동
 });
 
-averageScore.textContent = (await getScoreAverage()).toFixed(2);
+averageScore.textContent = (await getScoreAverage()).score.toFixed(0);
