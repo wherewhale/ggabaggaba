@@ -16,5 +16,9 @@ if (userScore >= 90) {
   feedback = "💪 저희를 정말 모르시는군요 ㅠ.ㅠ";
 }
 
+
 // 평가 멘트 반영하기
-document.getElementById("feedback").textContent = feedback;
+const feedbackElement = document.getElementsByClassName("feedback")[0];
+if (feedbackElement) {
+  feedbackElement.textContent = feedback;
+}
