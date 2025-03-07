@@ -9,7 +9,7 @@ document.getElementById('score').textContent = params.get('score') || 0;
 // 평가 멘트들 설정
 let feedback = '';
 if (userScore >= 90) {
-  feedback = '🎉 벌써 저희를 다 아시는군요!(쑥쓰)';
+  feedback = '(자리에서 일어나서) 냐냐냥을 세 번 외쳐주세요!';
 } else if (userScore >= 75) {
   feedback = '👍 어쩌면 베스트 프렌드가 될 지도?!';
 } else if (userScore >= 50) {
